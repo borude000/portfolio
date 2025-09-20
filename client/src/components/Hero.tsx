@@ -33,68 +33,71 @@ export function Hero() {
     <section className="bg-white py-20 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column - Content */}
-          <motion.div 
+          <motion.div
             className="space-y-8"
             initial="initial"
             animate="animate"
             variants={staggerContainer}
           >
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-5xl font-bold text-dark leading-tight"
               variants={staggerItem}
             >
-              Transforming ideas into modern,{' '}
-              <span className="text-primary">responsive websites</span>
+              Empowering businesses with modern
+              <span className="text-primary">websites, apps & digital growth</span>
+
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-xl text-gray-text leading-relaxed max-w-lg"
               variants={staggerItem}
             >
-              Breathe new life into your old site or start fresh with a custom build.
+              We’re a team of developers & strategists helping startups, clinics, 
+and local businesses grow with affordable, results-driven solutions.
+
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-col sm:flex-row gap-4"
               variants={staggerItem}
             >
               <Link href="/contact">
                 <CTAButton size="lg" className="px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  Get a Free Audit
+                  Book a Free Consultation
                 </CTAButton>
               </Link>
-              
+
               <Link href="/work">
-                <Button 
-                  variant="outline" 
-                  size="lg" 
+                <Button
+                  variant="outline"
+                  size="lg"
                   className="px-8 py-4 text-lg rounded-xl border-2 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
                 >
-                  View Work
+                  Explore Our Work
                 </Button>
               </Link>
             </motion.div>
           </motion.div>
 
           {/* Right Column - Device Mockups */}
-          <motion.div 
+          <motion.div
             className="relative"
             initial="initial"
             animate="animate"
             variants={fadeInRight}
           >
             {/* Laptop Mockup */}
-            <motion.div 
-              className="relative z-10"
+            <motion.div
+    className="relative z-10 mb-16 lg:mb-12" // added bottom margin
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
               <div className="bg-gray-800 rounded-t-2xl p-3 shadow-2xl">
                 {/* Laptop Screen - PNG Image */}
                 <div className="bg-white rounded-lg overflow-hidden aspect-[16/10] flex items-center justify-center">
-                  <img src="/images/fitl.png" alt="Laptop" className="w-full h-full object-cover" />
+                  <img src="/images/b1.png" alt="Laptop" className="w-fit  object-cover" />
                 </div>
               </div>
               {/* Laptop Base */}
@@ -104,7 +107,7 @@ export function Hero() {
             </motion.div>
 
             {/* Mobile Mockup */}
-            <motion.div 
+            <motion.div
               className="absolute -bottom-8 -right-4 lg:-right-8 z-20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -114,7 +117,7 @@ export function Hero() {
               <div className="bg-gray-900 rounded-3xl p-2 shadow-2xl w-28 sm:w-32">
                 {/* Mobile Screen - PNG Image */}
                 <div className="bg-white rounded-2xl overflow-hidden aspect-[9/19.5] flex items-center justify-center">
-                  <img src="/images/fit3.png" alt="Mobile" className="w-full h-full object-cover" />
+                  <img src="/images/b2.png" alt="Mobile" className="h-full object-cover" />
                 </div>
               </div>
             </motion.div>
@@ -122,24 +125,24 @@ export function Hero() {
             {/* Floating Elements */}
             <motion.div
               className="absolute -top-6 -left-6 w-12 h-12 bg-primary/20 rounded-full"
-              animate={{ 
+              animate={{
                 y: [0, -10, 0],
                 rotate: [0, 180, 360]
               }}
-              transition={{ 
+              transition={{
                 duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             />
-            
+
             <motion.div
               className="absolute -bottom-4 -left-8 w-8 h-8 bg-success/20 rounded-full"
-              animate={{ 
+              animate={{
                 y: [0, 10, 0],
                 x: [0, 5, 0]
               }}
-              transition={{ 
+              transition={{
                 duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut",
