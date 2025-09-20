@@ -1,0 +1,86 @@
+{
+  "projects": [
+    {
+      "slug": "Parkmate",
+      "title": "Parkmate- Smart Parking Solutions",
+      "industry": "Parking & Mobility",
+      "summary": "Complete redesign and development with real-time slot booking system, secure payment integration, and user order history",
+      "problem": "Urban areas face a huge challenge with parking availability. Traditional parking systems lack digital booking options, causing frustration, time waste, and revenue loss for operators.",
+      "solution": "Developed a modern responsive web application with real-time parking slot availability, booking system, secure payment gateway, and user-friendly order history. Added admin management features for tracking slots and bookings efficiently.",
+      "impact": { "leads": "+35%", "lcp": "<2.2s", "lighthouse": "95" },
+      "stack": ["MERN", "TailwindCSS", "Razorpay API", "JWT Auth", "Vercel"],
+      "beforeImage": "/images/after1.jpg",
+      "afterImage": "/images/before.jpg",
+      "gallery": [
+  "/images/Untitled.jpg",
+  "/images/Untitled2.jpg",
+  "/images/Untitled3.jpg"
+      ],
+      "testimonial": {
+        "quote": "Finding and booking parking slots became effortless with ParkMet. Our users love the convenience and we saw a 50% boost in engagement.",
+        "author": "Vaibhav Honde"
+      }
+    },
+    {
+      "slug": "malware-detection-rf",
+      "title": "Document & File Malware Detection — Python + Random Forest",
+      "industry": "Cybersecurity / Threat Detection",
+      "summary": "Built a machine-learning pipeline to detect malware in documents and executables using Random Forest, with a lightweight UI and SQL-backed logging/reporting.",
+      "problem": "Organizations were receiving infected attachments and files through email and shared drives. Manual checks and signature-only antivirus missed new variants, causing incidents and downtime.",
+      "solution": "Implemented a supervised ML system that extracts static features (metadata, entropy, n-grams, PE/pdf flags) and trains a Random Forest classifier. Added a simple web dashboard for uploads, real-time scoring, and report export. All scans and decisions are stored in SQL for audits and analytics",
+      "impact": { "leads": "+50%", "lcp": "1.8s", "lighthouse": "93" },
+      "stack": ["React", "Python",
+        "scikit-learn (RandomForest)",
+        "pandas / numpy",
+        "joblib",
+        "Flask or Streamlit (dashboard)",
+        "SQLite/PostgreSQL (logging & reports)",
+        "Figma (UI wireframes)",
+        "Docker (packaging)",
+        "GitHub Actions (CI)"],
+      "beforeImage": "/images/m1.jpg",
+      "afterImage": "/images/m1.jpg",
+      "gallery": [
+        "/images/m1.jpg",
+        "/images/m2.jpg",
+        "/images/m3.jpg",
+        "/images/m4.jpg"
+      ],
+      "testimonial": {
+        "quote": "The Random Forest detector cut incident triage time dramatically. The SQL-backed reports made compliance audits painless.",
+        "author": "Sanika Galande"
+        
+      }
+    },
+    {
+      "slug": "ats-resume-checker",
+      "title": "ATS Resume Checker — Smart Resume Screening Tool",
+      "industry": "HR Tech / Recruitment",
+      "summary": "Developed an AI-powered web application that scans resumes against job descriptions, highlights missing keywords, and provides ATS compatibility scores with detailed improvement suggestions.",
+      "problem": "Job seekers often create resumes that look good to humans but fail to pass Applicant Tracking Systems (ATS). Recruiters also spend too much time manually screening resumes for keywords and formatting issues.",
+      "solution": "Built an ATS resume checker that parses resumes (PDF/DOCX), extracts text, compares against job description keywords, and generates a scorecard. The system highlights missing skills, formatting issues, and suggests improvements. Added SQL-backed history for users to track changes across versions.",
+      "impact": { "leads": "+25%", "lcp": "2.1s", "lighthouse": "91" },
+      "stack": ["Python",
+        "NLTK / spaCy (text processing)",
+        "scikit-learn (keyword relevance scoring)",
+        "Flask / Streamlit (frontend)",
+        "SQL (resume history & reports)",
+        "Figma (wireframing)",
+        "Docker (deployment)"],
+      "beforeImage": "/images/a1.png",
+      "afterImage": "/images/a1.png",
+      "gallery": [
+       "/images/a1.png",
+       "/images/a2.png",
+       "/images/a3.png",
+       "/images/a4.png",
+       "/images/a5.png",
+       "/images/a6.png"
+      ],
+      "testimonial": {
+        "quote":  "The ATS Resume Checker simplified hiring. Candidates submit resumes that align better with job requirements, and our team saves hours every week.",
+        "company": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "quote": "Finding and booking parking slots has never been this easy. Our customers love ParkMet’s simple interface and quick payments.",
+      "author": "Mr.Vaibhav Honde",
+      "company": "",
+      "avatar": "/images/vaibhav.png",
+      "rating": 5
+    },
+    {
+      "quote": "Our security team’s workload dropped significantly. The Random Forest-based malware detection caught threats that signature scanners missed.",
+      "author": "Sanika Galande",
+      "company": "",
+      "avatar": "/images/sanika.jpg",
+      "rating": 5
+    },
+    {
+      "quote": "Thanks to the ATS Resume Checker, I optimized my CV and finally cleared the screening stage. Landed 3 interview calls in a week!",
+      "author": "Gaurav Wagh",
+      "company": "",
+      "avatar": "/images/gaurav.png",
+      "rating": 5
+    }
+  ]
+}
