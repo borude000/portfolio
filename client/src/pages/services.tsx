@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Eye, Code, TrendingUp, Shield, Plug, Star, ArrowRight } from 'lucide-react';
+import { CheckCircle, Shield, MapPin, ShoppingCart, ArrowRight } from 'lucide-react';
 import { SEOHead } from '@/components/ui/seo-head';
 import { SectionHeader } from '@/components/ui/section-header';
 import { CTAButton } from '@/components/ui/cta-button';
@@ -8,6 +8,12 @@ const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
+};
+
+const slideInLeft = {
+  initial: { opacity: 0, x: -50 },
+  animate: { opacity: 1, x: 0 },
+  transition: { duration: 0.8, ease: 'easeOut' }
 };
 
 const staggerContainer = {
@@ -20,55 +26,29 @@ const staggerContainer = {
 
 export default function Services() {
   const services = [
-    {
-      icon: <Eye className="text-primary text-xl" />,
-      title: "Website Redesign",
-      description: "Complete UI/UX overhaul with modern design principles, improved information architecture, and conversion-focused copy.",
-      features: [
-        "User experience audit",
-        "Modern visual design", 
-        "Conversion optimization"
-      ]
-    },
-    {
-      icon: <Code className="text-primary text-xl" />,
-      title: "Responsive Development",
-      description: "Mobile-first development using React/Next.js with accessibility standards and clean, maintainable code.",
-      features: [
-        "React/Next.js development",
-        "WCAG 2.1 accessibility",
-        "Cross-browser compatibility"
-      ]
-    },
-    {
-      icon: <TrendingUp className="text-primary text-xl" />,
-      title: "Performance & SEO",
-      description: "Core Web Vitals optimization, on-page SEO, and schema markup for better search rankings and user experience.",
-      features: [
-        "Core Web Vitals optimization",
-        "Technical SEO setup",
-        "Schema.org markup"
-      ]
-    },
+    // Healthcare
     {
       icon: <Shield className="text-primary text-xl" />,
-      title: "Ongoing Maintenance",
-      description: "Regular updates, security monitoring, performance checks, and monthly reports to keep your site running smoothly.",
-      features: [
-        "Security monitoring",
-        "Regular backups",
-        "Monthly performance reports"
-      ]
+      title: 'Healthcare Websites',
+      description:
+        'HIPAA-compliant websites designed for clinics and local doctors, optimized for patient trust and conversions.',
+      features: ['HIPAA & data security compliance', 'Responsive design for all devices', 'Appointment booking integration']
     },
+    // Local Businesses
     {
-      icon: <Plug className="text-primary text-xl" />,
-      title: "System Integrations",
-      description: "Connect your website with WhatsApp, CRM systems, payment gateways, booking systems, and analytics tools.",
-      features: [
-        "WhatsApp integration",
-        "Payment gateway setup",
-        "Analytics & tracking"
-      ]
+      icon: <MapPin className="text-primary text-xl" />,
+      title: 'Local Business Websites',
+      description:
+        'Affordable, responsive websites for shops, cafes, and service providers with local SEO and Google Maps optimization.',
+      features: ['Google Maps & local SEO', 'CMS for quick updates', 'Mobile-first responsive design']
+    },
+    // E-commerce
+    {
+      icon: <ShoppingCart className="text-primary text-xl" />,
+      title: 'E-commerce Stores',
+      description:
+        'Full-featured Shotionpify/WooCommerce stores optimized for sales, SEO, and advertising campaigns.',
+      features: ['Shopify/WooCommerce setup', 'Product & checkout optimization', 'SEO & paid ads integration']
     }
   ];
 
@@ -153,15 +133,17 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-white">
+      
+
+      {/* Services Grid - Copied from Home page */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-8">
-          <SectionHeader 
-            title="Our comprehensive service offerings"
-            subtitle="Every service designed to maximize your website's impact on business growth"
+          <SectionHeader
+            title="Our Freelancing Agency Services"
+            subtitle="From creating stunning websites to ongoing support, we help businesses grow online"
           />
-          
-          <motion.div 
+
+          <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="initial"
@@ -171,44 +153,162 @@ export default function Services() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300"
                 variants={fadeInUp}
+                whileHover={{
+                  y: -8,
+                  scale: 1.02,
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+                }}
+                transition={{ type: 'spring', stiffness: 300 }}
               >
-                <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  {service.icon}
-                </div>
-                <h3 className="font-sora font-semibold text-xl text-dark mb-4">{service.title}</h3>
+                <motion.div
+                  className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6"
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: 5,
+                    backgroundColor: 'rgba(249, 115, 22, 0.2)'
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.div
+                    animate={{
+                      rotateY: [0, 360]
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Number.POSITIVE_INFINITY,
+                      delay: index * 0.5
+                    }}
+                  >
+                    {service.icon}
+                  </motion.div>
+                </motion.div>
+                <motion.h3
+                  className="font-sora font-semibold text-xl text-dark mb-4"
+                  whileHover={{ color: '#F97316' }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {service.title}
+                </motion.h3>
                 <p className="text-gray-text mb-6">{service.description}</p>
-                <ul className="space-y-2 text-sm text-gray-text">
+                <motion.ul
+                  className="space-y-2 text-sm text-gray-text"
+                  variants={staggerContainer}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                >
                   {service.features.map((feature, idx) => (
+                    <motion.li
+                      key={idx}
+                      className="flex items-center"
+                      variants={slideInLeft}
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <motion.div
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{
+                          duration: 1.5,
+                          repeat: Number.POSITIVE_INFINITY,
+                          delay: idx * 0.2
+                        }}
+                      >
+                        <CheckCircle className="text-success mr-2" size={16} />
+                      </motion.div>
+                      {feature}
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <SectionHeader
+            title="Simple & Transparent Pricing"
+            subtitle="Flexible packages designed to fit small businesses and growing brands"
+          />
+
+          <motion.div
+            className="grid md:grid-cols-3 gap-8 mt-12"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            {[
+              {
+                title: 'Basic Website',
+                price: '$800',
+                features: [
+                  'Up to 5 pages',
+                  'Responsive design',
+                  'Basic SEO setup',
+                  '1 round of revisions'
+                ],
+                highlight: false
+              },
+              {
+                title: 'Standard Website',
+                price: '$1,500',
+                features: [
+                  'Up to 10 pages',
+                  'Custom UI/UX design',
+                  'SEO & performance optimization',
+                  '2 rounds of revisions',
+                  'CMS integration'
+                ],
+                highlight: true
+              },
+              {
+                title: 'Premium Website',
+                price: '$3,000+',
+                features: [
+                  'Unlimited pages',
+                  'Advanced UI/UX & animations',
+                  'Full SEO & marketing setup',
+                  'Ongoing maintenance option',
+                  'E-commerce or custom features'
+                ],
+                highlight: false
+              }
+            ].map((plan, index) => (
+              <motion.div
+                key={index}
+                className={`bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border ${
+                  plan.highlight ? 'border-primary scale-105' : 'border-gray-100'
+                }`}
+                variants={fadeInUp}
+                whileHover={{ y: -5, scale: plan.highlight ? 1.07 : 1.03 }}
+              >
+                <h3 className="font-sora font-semibold text-xl text-dark mb-4">{plan.title}</h3>
+                <p className="text-primary font-bold text-3xl mb-6">{plan.price}</p>
+
+                <ul className="space-y-3 mb-6 text-gray-text text-sm">
+                  {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center">
-                      <CheckCircle className="text-success mr-2 flex-shrink-0" size={16} />
+                      <CheckCircle className="text-success mr-2" size={16} />
                       {feature}
                     </li>
                   ))}
                 </ul>
+
+                <a
+                  href="/contact"
+                  className={`block text-center font-semibold py-3 rounded-lg ${
+                    plan.highlight ? 'bg-primary text-white' : 'bg-gray-100 text-dark hover:bg-gray-200'
+                  } transition-colors`}
+                >
+                  Get Started
+                </a>
               </motion.div>
             ))}
-
-            {/* Complete Package Card */}
-            <motion.div
-              className="bg-gradient-to-br from-primary to-orange-600 p-8 rounded-2xl text-white"
-              variants={fadeInUp}
-            >
-              <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                <Star className="text-white text-xl" />
-              </div>
-              <h3 className="font-sora font-semibold text-xl mb-4">Complete Package</h3>
-              <p className="mb-6 opacity-90">Get everything above in one comprehensive package with priority support and dedicated project management.</p>
-              <CTAButton
-                href="/contact"
-                variant="secondary"
-                eventLabel="complete_package_cta"
-                icon={<ArrowRight size={16} />}
-              >
-                Get Started
-              </CTAButton>
-            </motion.div>
           </motion.div>
         </div>
       </section>
