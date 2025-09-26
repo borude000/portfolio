@@ -60,7 +60,7 @@ export default function About() {
           >
             <h1 className="text-4xl md:text-6xl font-sora font-bold text-dark mb-6 leading-tight">
               About{' '}
-              <span className="text-primary">WebRevamp Studio</span>
+              <span className="text-primary">Us</span>
             </h1>
             
             <p className="text-xl text-gray-text mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -169,46 +169,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
-            className="max-w-4xl mx-auto"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-          >
-            <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm">
-              <div className="grid md:grid-cols-3 gap-8 items-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-primary to-orange-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <img src="/images/nikhil.jpg" alt="Nikhil Borude" className="w-32 h-32 rounded-full object-cover" />
-                  </div>
-                  <h3 className="font-sora font-semibold text-xl text-dark mb-1">Nikhil Borude</h3>
-                  <p className="text-gray-text">Founder & Lead Developer</p>
-                </div>
-                
-                <div className="md:col-span-2">
-                  <h3 className="font-sora font-semibold text-2xl text-dark mb-4">Meet the Founder</h3>
-                  <p className="text-gray-text mb-4">
-                    With years of experience in full-stack development and a passion for helping small businesses succeed online, Nikhil founded WebRevamp Studio to bridge the gap between great businesses and great websites.
-                  </p>
-                  <p className="text-gray-text">
-                    Specializing in the MERN stack and modern web technologies, he leads every project with a focus on performance, user experience, and business results.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Values */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionHeader 
-            title="Why Choose WebRevamp Studio?"
+            title="Why Choose Us?"
             subtitle="The qualities that set us apart from other web development agencies"
           />
           

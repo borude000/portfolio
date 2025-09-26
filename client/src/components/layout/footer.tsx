@@ -13,11 +13,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'Website Redesign', href: '/services#redesign' },
-    { name: 'Responsive Development', href: '/services#development' },
-    { name: 'Performance & SEO', href: '/services#seo' },
-    { name: 'Maintenance Plans', href: '/services#maintenance' },
-    { name: 'System Integrations', href: '/services#integrations' },
+    { name: 'Healthcare Websites', href: '/services' },
+    { name: 'Local Business Websites', href: '/services' },
+    { name: 'E-commerce Stores', href: '/services' },
   ];
 
   const company = [
